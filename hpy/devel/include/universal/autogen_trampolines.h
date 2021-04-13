@@ -490,8 +490,8 @@ static inline HPyUnicodeBuilder HPyUnicodeBuilder_New(HPyContext *ctx, HPy_ssize
      return ctx->ctx_UnicodeBuilder_New ( ctx, size ); 
 }
 
-static inline int HPyUnicodeBuilder_Add(HPyContext *ctx, HPyUnicodeBuilder builder, HPy h_item) {
-     return ctx->ctx_UnicodeBuilder_Add ( ctx, builder, h_item ); 
+static inline int HPyUnicodeBuilder_Add(HPyContext *ctx, HPyUnicodeBuilder builder, const char *s) {
+     return ctx->ctx_UnicodeBuilder_Add ( ctx, builder, s ); 
 }
 
 static inline HPy HPyUnicodeBuilder_Build(HPyContext *ctx, HPyUnicodeBuilder builder) {

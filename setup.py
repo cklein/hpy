@@ -2,7 +2,7 @@ import textwrap
 import sys
 import os
 import os.path
-from setuptools import setup, Extension
+from setuptools import setup, Extension, find_packages
 import platform
 
 # this package is supposed to be installed ONLY on CPython. Try to bail out
@@ -158,7 +158,7 @@ setup(
     description='A better C API for Python',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
-    packages = ['hpy.devel', 'hpy.debug', 'hpy.trace'],
+    packages = find_packages(),
     include_package_data=True,
     extras_require={
         "dev": DEV_REQUIREMENTS,
